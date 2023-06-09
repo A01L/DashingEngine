@@ -1,0 +1,7 @@
+RedirectMatch 403 ^/ectr/main.php$
+RedirectMatch 403 ^/ectr/$
+RedirectMatch 403 ^/view/$
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php
